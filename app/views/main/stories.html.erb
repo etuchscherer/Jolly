@@ -1,0 +1,20 @@
+<div class="container">
+	<%= render 'shared/masthead' %>
+
+	<h2 class="page-header">Stories</h2>
+
+	<div class="row-fluid">
+		<% Author.all.each do |a| %>
+		<legend>
+			<h3><%= "#{a.first} #{a.last}" %>'s diary.</h3>
+			<span class="span6">
+				<p>
+					<%= a.excerpts.first!.entry %>
+				 	</p>
+				<%= link_to 'read more', '#', :class => 'btn ' %>
+			</span>
+			<%= image_tag a.squadron.patch, :class => 'offset2 span3'  %>
+		</legend>
+		<% end %>
+	</div>
+</div>

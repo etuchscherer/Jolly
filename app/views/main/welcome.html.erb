@@ -1,45 +1,15 @@
 <div class="container">
-	<div class="masthead">
-		<h3 class="muted">90th Bombardment Group (H)</h3>
-		<div class="navbar">
-			<div class="navbar-inner">
-				<div class="container">
-					<ul class="nav">
-						<li class="active">
-							<a href="#">Home</a>
-						</li>
-						<li>
-							<a href="#">History</a>
-						</li>
-						<li>
-							<a href="#">Stories</a>
-						</li>
-						<li>
-							<a href="#">Soldiers</a>
-						</li>
-						<li>
-							<a href="#">About</a>
-						</li>
-						<li>
-							<a href="#">Contact</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<!-- /.navbar -->
-	</div>
+	<%= render 'shared/masthead' %>
 
 	<div class="jumbotron">
 		<h1>Jolly Rogers</h1>
 		<p class="lead">
-			The 90th Bomb Group was the most awesome B-24 outfit in WWII
+			<em>“The Best Damn Heavy Bomb Group in the World”</em>
 		</p>
 		<a class="btn btn-large btn-success" href="#">Find out why</a>
 	</div>
 
-	<hr>
-
+	<hr />
 	<div class="row-fluid">
 		<div class="span3">
 			<p><%= image_tag '/assets/319.png' %></p>

@@ -1,11 +1,20 @@
 Jolly::Application.routes.draw do
-  root :to => "static#welcome"
+  resources :diaries
 
-  get "static/welcome"
 
-  get "static/history"
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  get "static/about"
+  devise_for :users
+
+  root :to => "main#welcome"
+
+  get "main/welcome"
+
+  get "main/history"
+
+  get "main/about"
+
+  get "main/stories"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
