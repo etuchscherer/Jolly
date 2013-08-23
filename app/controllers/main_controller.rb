@@ -10,4 +10,7 @@ class MainController < ApplicationController
 
   def stories
   end
+
+  def liberator
+  end
 end

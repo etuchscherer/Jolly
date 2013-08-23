@@ -16,6 +16,8 @@ Jolly::Application.routes.draw do
 
   get "main/stories"
 
+  get "main/liberator"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
