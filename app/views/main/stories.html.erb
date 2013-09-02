@@ -6,10 +6,12 @@
 	<div class="row-fluid">
 		<% Author.all.each do |a| %>
 		<legend>
-			<h3><%= "#{a.first} #{a.last}" %>'s diary.</h3>
+			<h3>
+				<%= diary_name a %>
+			</h3>
 			<span class="span6">
 				<p>
-					<%= a.excerpts.first!.entry %>
+					<%= lead_excerpt_snippet a %>
 				 	</p>
 				<%= link_to 'read more', '#', :class => 'btn ' %>
 			</span>
