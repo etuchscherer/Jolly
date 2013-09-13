@@ -4,7 +4,7 @@
 	<h2 class="page-header">Stories</h2>
 
 	<div class="row-fluid">
-		<% Author.all.each do |a| %>
+		<% Author.all.reverse.each do |a| %>
 		<div class="author cell">
 			<h3>
 				<%= diary_name a %>
