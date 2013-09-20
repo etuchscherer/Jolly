@@ -4,17 +4,23 @@
 	<h2 class="page-header">Stories</h2>
 
 	<div class="row-fluid">
-		<% Author.all.each do |a| %>
-		<legend>
-			<h3><%= "#{a.first} #{a.last}" %>'s diary.</h3>
-			<span class="span6">
-				<p>
-					<%= a.excerpts.first!.entry %>
-				 	</p>
-				<%= link_to 'read more', '#', :class => 'btn ' %>
+		<% Author.all.reverse.each do |a| %>
+		<div class="author cell">
+			<h3>
+				<%= diary_name a %>
+				<br />
+				<small>
+					<%= a.occupation %>
+				</small>
+			</h3>
+			<span class="span12">
+				<p class="span6">
+					<%= lead_excerpt_snippet a %>
+			 	</p>
+				<%= author_image(a, :class => 'offset2 span3 author-image') %>
 			</span>
-			<%= image_tag a.squadron.patch, :class => 'offset2 span3'  %>
-		</legend>
+			<%= link_to 'read more', '#', :class => 'btn ' %>
+		</div>
 		<% end %>
 	</div>
 </div>

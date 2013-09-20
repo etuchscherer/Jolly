@@ -1,0 +1,3 @@
+module ExcerptHelper
+
+end
