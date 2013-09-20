@@ -8,15 +8,15 @@ Jolly::Application.routes.draw do
 
   root :to => "main#welcome"
 
-  get "main/welcome"
+  get "welcome" => 'main#welcome', :as => :welcome
 
-  get "main/history"
+  get "history" => 'main#history', :as => :history
 
-  get "main/about"
+  get "about" => 'main#about', :as => :about
 
-  get "main/stories"
+  get "stories" => 'main#stories', :as => :stories
 
-  get "main/liberator"
+  get "liberator" => 'main#liberator', :as => :liberator
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

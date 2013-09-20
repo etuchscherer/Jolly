@@ -23,6 +23,14 @@ end
 
 gem 'jquery-rails'
 gem 'rails_admin'
+
+group :test do
+	gem 'cucumber-rails', :require => false
+	gem 'database_cleaner'
+	gem 'capybara'
+	gem 'rspec-expectations'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
